@@ -71,6 +71,35 @@ docker network inspect ecosystem
 まずは、Nginxをデプロイする。
 
 
+### まずは、デプロイするためのdocker composeを作成する
+
+Nginxをデプロイするための、モジュール群を別リポジトリに格納してある。
+[Nginx-Module](https://github.com/halchil/Nginx-Module/tree/main)
+
+このとき、モジュールから引っ張ってきた**volumeはコメントアウト**しておく。
+
+```
+[実行コマンド ディレクトリ移動]
+cd Nginx-ElasticSearch/Nginx
+
+[実行コマンド]
+docker compose up -d
+
+[結果]
+WARN[0000] /home/mainte/Nginx-ElasticSearch/Nginx/docker-compose.yaml: `version` is obsolete 
+[+] Running 1/1
+ ✔ Container nginx  Started                          
+
+[確認コマンド]
+docker ps
+
+[結果]
+CONTAINER ID   IMAGE          COMMAND                  CREATED              STATUS         PORTS                               NAMES
+87e322ba2240   nginx:latest   "/docker-entrypoint.…"   About a minute ago   Up 3 seconds   0.0.0.0:80->80/tcp, :::80->80/tcp   nginx
+```
+
+アクセスを確認する。
+
 
 
 ## ElasticSearch イメージ取得
