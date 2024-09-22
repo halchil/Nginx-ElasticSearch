@@ -100,6 +100,15 @@ CONTAINER ID   IMAGE          COMMAND                  CREATED              STAT
 
 アクセスを確認する。
 
+### volume用のnginx.confを作成する
+`nginx.conf`をモジュール化しておく。
+[Nginx Conf](https://github.com/halchil/Nginx-Module/tree/main/Nginx%20Conf)
+
+待ち受けるIPをloacalhostから仮想マシンのIPに変更する必要があるか
+
+
+
+
 
 
 ## ElasticSearch イメージ取得
