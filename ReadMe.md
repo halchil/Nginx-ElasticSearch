@@ -104,7 +104,8 @@ CONTAINER ID   IMAGE          COMMAND                  CREATED              STAT
 `nginx.conf`をモジュール化しておく。
 [Nginx Conf](https://github.com/halchil/Nginx-Module/tree/main/Nginx%20Conf)
 
-待ち受けるIPをloacalhostから仮想マシンのIPに変更する必要があるか
+
+<span style="color:red">待ち受けるIPをloacalhostから仮想マシンのIPに変更する必要があるか</span>
 
 
 
