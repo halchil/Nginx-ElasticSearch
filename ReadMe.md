@@ -105,12 +105,30 @@ CONTAINER ID   IMAGE          COMMAND                  CREATED              STAT
 [Nginx Conf](https://github.com/halchil/Nginx-Module/tree/main/Nginx%20Conf)
 
 
-<span style="color:#FF0000">待ち受けるIPをloacalhostから仮想マシンのIPに変更する必要があるか</span>
+**待ち受けるIPをloacalhostから仮想マシンのIPに変更する必要があるか**
 
+モジュールを組み合わせることで、`nginx.conf`を作成
 
+[nginx.conf](https://github.com/halchil/Nginx-ElasticSearch/blob/main/Nginx/nginx.conf)
 
+`docker-compose.yaml`のvolume部分のコメントアウトを外してデプロイする。
 
+```
+[確認コマンド]
+docker ps
 
+[結果]
+CONTAINER ID   IMAGE          COMMAND                  CREATED        STATUS        PORTS                               NAMES
+9aa6258aad75   nginx:latest   "/docker-entrypoint.…"   11 hours ago   Up 11 hours   0.0.0.0:80->80/tcp, :::80->80/tcp   nginx
+```
+
+ブラウザにアクセスするアドレスは以下。
+```
+http://192.168.56.102:80
+```
+アクセスを確認する。
+
+![access](./Img/img1.png)
 
 ## ElasticSearch イメージ取得
 docker pull elasticsearch:8.9.0
