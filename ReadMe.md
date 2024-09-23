@@ -145,8 +145,10 @@ REPOSITORY            TAG       IMAGE ID       CREATED         SIZE
 ...
 elasticsearch         8.9.0     281908e9f34e   14 months ago   1.34GB
 ...
-
 ```
 
 ## ElasticSearch用のdocker-compise.yamlを作成
 
+```
+http://192.168.56.102:9200
+```
