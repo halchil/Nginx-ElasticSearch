@@ -105,7 +105,7 @@ CONTAINER ID   IMAGE          COMMAND                  CREATED              STAT
 [Nginx Conf](https://github.com/halchil/Nginx-Module/tree/main/Nginx%20Conf)
 
 
-**待ち受けるIPをloacalhostから仮想マシンのIPに変更する必要があるか**
+(**待ち受けるIPをloacalhostから仮想マシンのIPに変更する必要があるか**)
 
 モジュールを組み合わせることで、`nginx.conf`を作成
 
@@ -131,4 +131,20 @@ http://192.168.56.102:80
 ![access](./Img/img1.png)
 
 ## ElasticSearch イメージ取得
+次は、先ほどデプロイしたNginxのバックエンドとしてElasticSearchを接続するため、のイメージを取得する。
+
+```
+[実行コマンド]
 docker pull elasticsearch:8.9.0
+
+[確認コマンド]
+docker image list
+
+[結果]
+REPOSITORY            TAG       IMAGE ID       CREATED         SIZE
+...
+elasticsearch         8.9.0     281908e9f34e   14 months ago   1.34GB
+...
+
+```
+
